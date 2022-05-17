@@ -34,10 +34,10 @@ window.onload = () => {
 		}
 		makePersonInformation() {
 			this.personArray.forEach((value, index) => {
-        const jumsu = [value.math, value.language, value.english];
-        console.log(jumsu)
-        const total = jumsu.reduce((accumalator, current) => accumalator + current, 0);
-        const avg = Math.floor(jumsu.reduce((total, score)=> total + score) / jumsu.length);
+				const jumsu = [value.math, value.language, value.english];
+				console.log(jumsu);
+				const total = jumsu.reduce((accumalator, current) => accumalator + current, 0);
+				const avg = Math.floor(jumsu.reduce((total, score) => total + score) / jumsu.length);
 				const person = document.createElement('article');
 				ncstestmain.appendChild(person);
 				person.setAttribute('class', 'person');
@@ -61,11 +61,9 @@ window.onload = () => {
         </section>`;
 			});
 		}
-		makeTotalJumsi(){
-
-    }
+		makeTotalJumsi() {}
 	}
 	const ncstestmain = document.querySelector('.ncstestmain');
-  let personinformation = new MakeJumsu('person');
-  personinformation.makePersonInformation()
+	let personinformation = new MakeJumsu('person');
+	personinformation.makePersonInformation();
 };
